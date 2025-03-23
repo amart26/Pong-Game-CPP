@@ -1,11 +1,12 @@
+#ifndef BALL_HPP
+#define BALL_HPP
+
 #include <raylib.h>
 #include <iostream>
 
-#include "player.hpp"
-#include "opponent.hpp"
+class Player;
+class Opponent;
 
-
-#pragma once
 
 class Ball {
 
@@ -31,3 +32,5 @@ class Ball {
         float yVelocity;
         Color ballColor;
 };
+
+#endif

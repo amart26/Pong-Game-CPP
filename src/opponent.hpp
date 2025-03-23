@@ -1,7 +1,9 @@
+#ifndef OPPONENT_HPP
+#define OPPONENT_HPP
+
 #include <raylib.h>
 
-
-#pragma once
+class Ball; 
 
 class Opponent {
 
@@ -17,7 +19,7 @@ class Opponent {
 
         void DrawOpponent();
 
-        void MoveOpponent(const int screenWidth, const int screenHeight);
+        void MoveOpponent(const Vector2 ballPosition, const int screenWidth, const int screenHeight);
 
     private:
 
@@ -25,3 +27,5 @@ class Opponent {
         Color opponentColor;  
 
 }; 
+
+#endif

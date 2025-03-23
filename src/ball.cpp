@@ -1,4 +1,6 @@
 #include "ball.hpp"
+#include "opponent.hpp"
+#include "player.hpp"
 
 Ball::Ball(Vector2 &ballPosition, const int& ballRadius, const Color& ballColor):
 ballPosition(ballPosition),

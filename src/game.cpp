@@ -39,8 +39,8 @@ void Game::CreateGame()
     {
             ball.CheckBallCollision(player, opponent);
             player.MovePlayer(screenWidth, screenHeight);
-            opponent.MoveOpponent(screenWidth, screenHeight);
             ball.MoveBall(screenWidth, screenHeight);
+            opponent.MoveOpponent(ball.ballPosition, screenWidth, screenHeight);
             UpdateScore();
 
             BeginDrawing(); 

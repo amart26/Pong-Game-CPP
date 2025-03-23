@@ -1,6 +1,7 @@
-#include <raylib.h>
+#ifndef PLAYER_CPP
+#define PLAYER_CPP
 
-#pragma once
+#include <raylib.h>
 
 class Player {
 
@@ -21,3 +22,5 @@ class Player {
         float playerYVelocity;
         Color playerColor;  
 };
+
+#endif

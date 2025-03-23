@@ -1,3 +1,6 @@
+#ifndef GAME_HPP
+#define GAME_HPP
+
 #include <raylib.h> 
 #include <iostream>
 #include <string>
@@ -5,8 +8,6 @@
 #include "player.hpp"
 #include "opponent.hpp"
 #include "ball.hpp"
-
-#pragma once
 
 class Game {
 
@@ -43,3 +44,5 @@ class Game {
             void UpdateScore();          
             
 }; 
+
+#endif

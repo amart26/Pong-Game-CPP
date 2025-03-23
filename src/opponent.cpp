@@ -1,4 +1,5 @@
 #include "opponent.hpp"
+#include "ball.hpp"
 
 Opponent::Opponent(Rectangle &opponentBody, const Color opponentColor, const float &opponentYVelocity):
 opponentBody(opponentBody),
@@ -20,10 +21,13 @@ void Opponent::DrawOpponent()
     DrawRectangleRec(opponentBody, opponentColor);
 }
 
-void Opponent::MoveOpponent(const int screenWidth, const int screenHeight)
+void Opponent::MoveOpponent(const Vector2 ballPosition, const int screenWidth, const int screenHeight)
 {
-    
-    if(IsKeyDown(KEY_UP) && opponentBody.y > 0){opponentBody.y -= opponentYVelocity;}
-    else if(IsKeyDown(KEY_DOWN) && opponentBody.y < screenHeight - opponentBody.height){opponentBody.y += opponentYVelocity;}
+    if(ballPosition.y < opponentBody.y && opponentBody.height / 2 < screenHeight - opponentBody.height)
+    {
+        opponentBody.y -= opponentYVelocity;
+    }
+    else{
+        opponentBody.y += opponentYVelocity;
+    }
 }
-
